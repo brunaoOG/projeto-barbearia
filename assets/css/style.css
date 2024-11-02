@@ -1,0 +1,442 @@
+@import url("https://fonts.googleapis.com/css2?family=Sancreek&family=Zilla+Slab+Highlight:wght@400;700&family=Danfo&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:wght@100..900&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter";
+  font-weight: 600;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  cursor: pointer;
+}
+
+.container {
+  width: 1024px;
+  margin: auto;
+}
+
+/* HEADER */
+
+header {
+  width: 100%;
+  height: 84px;
+  background: #000000;
+  top: 0;
+  position: sticky;
+  z-index: 999;
+  box-shadow: -2px 8px 58px 20px #000;
+}
+
+header .container {
+  height: inherit;
+  display: flex;
+  align-items: center;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+header .logo img {
+  width: 50px;
+  height: 50px;
+}
+
+header .logo .text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #caaa57;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+header .logo .text p:first-child {
+  font-size: 16px;
+  font-family: "sancreek";
+}
+
+header .logo .text p:last-child {
+  font-size: 24px;
+  font-family: "sancreek";
+}
+
+header nav {
+  flex: 1;
+  display: flex;
+  justify-content: end;
+}
+
+header ul {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+}
+
+header ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+header ul li:last-child a {
+  padding: 12px 15px;
+  background: #caaa57;
+  border-radius: 10px;
+  color: #000;
+}
+
+header ul li:not(:last-child) a:hover {
+  color: #caaa57;
+  text-shadow: -2px 2px 60px #caaa57;
+}
+
+/* HERO AREA */
+
+.hero {
+  width: 100%;
+  height: 600px;
+  background-image: url(../images/background.jpg);
+  background-size: cover;
+  background-position: center -150px;
+}
+
+.hero .container {
+  width: 100%;
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #caaa57;
+  background: #000000a3;
+}
+
+.hero h1,
+.hero h2 {
+  font-family: "sancreek";
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font-size: 70px;
+  text-shadow: 10px 10px 50px #000;
+}
+
+.hero ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  list-style: none;
+}
+
+.hero ul li {
+  position: relative;
+  padding: 0px 25px;
+}
+
+.hero ul li::before {
+  content: "";
+  position: absolute;
+  right: 0px;
+  width: 20px;
+  height: 20px;
+  background-image: url(../images/barber-pole.png);
+  background-size: contain;
+}
+
+.hero ul li::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  width: 20px;
+  height: 20px;
+  background-image: url(../images/barber-pole.png);
+  background-size: contain;
+}
+
+.hero a {
+  margin-top: 20px;
+  padding: 14px 21px;
+  text-decoration: none;
+  background: #caaa57;
+  border-radius: 10px;
+  color: #000;
+  box-shadow: 1px 1px 50px #ffffff38;
+  transition: all 0.8s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+.hero a:hover {
+  background-color: #00000080;
+  color: #caaa57;
+  box-shadow: 1px 1px 50px #000;
+  transform: scale(1.03);
+}
+
+/* SECTIONS */
+
+.sect {
+  width: 100%;
+  padding: 60px 0px;
+  background: #000;
+  color: #fff;
+}
+
+.sect .title {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 50px;
+}
+
+.sect .title h3 {
+  font-size: 15px;
+}
+
+.sect .title h1 {
+  font-size: 28px;
+  font-family: "sancreek";
+  letter-spacing: 3px;
+}
+
+.sect .title .line {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 20px;
+}
+
+.sect .title .line::after {
+  position: absolute;
+  left: 0px;
+  content: "";
+  width: 40%;
+  height: 2px;
+  background: #caaa57;
+}
+
+.sect .title .line::before {
+  position: absolute;
+  right: 0px;
+  content: "";
+  width: 40%;
+  height: 2px;
+  background: #caaa57;
+}
+
+.sect .title .line img {
+  width: 32px;
+  height: 32px;
+}
+
+.price-table {
+  flex: 1;
+  height: 700px;
+}
+
+.price-table:first-child {
+  background-image: url(../images/cabelo.jpg);
+  background-size: cover;
+}
+
+.price-table:nth-child(2) {
+  background-image: url(../images/barba.jpg);
+  background-size: cover;
+}
+
+.price-table:last-child {
+  background-image: url(../images/corteebarba.jpg);
+  background-size: cover;
+  background-position-x: -100px;
+}
+
+.price-table .new-opacity {
+  width: 100%;
+  height: 100%;
+  background: #00000081;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.price-table img {
+  width: 120px;
+  height: 120px;
+}
+
+.services .sect-body {
+  display: flex;
+  gap: 10px;
+}
+
+.price-table .both-services {
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.price-table .both-services img {
+  width: 80px;
+  height: 80px;
+}
+
+.price-table .both-services p {
+  padding: 0px 10px;
+  font-size: 24px;
+}
+
+.services .appointment {
+  margin-top: -30px;
+}
+
+.services .appointment a {
+  transition: all 0.8s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+/* BOTÃO DE MARCAR GERAL */
+
+.appointment {
+  display: flex;
+  justify-content: center;
+}
+
+.appointment a {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  padding: 20px 21px;
+  text-decoration: none;
+  background: #caaa57;
+  border-radius: 10px;
+  color: #000;
+  box-shadow: 1px 1px 50px #ffffff38;
+}
+
+.appointment a img {
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+}
+
+/* GALERIA */
+
+.galery .container {
+  width: 1320px;
+}
+
+.galery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.galery .photoarea {
+  width: 100%;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: repeat(3, 350px);
+  grid-template-rows: repeat(3, 350px);
+  gap: 10px;
+}
+
+.photoarea .photo,
+.photoarea img {
+  width: 350px;
+  height: 350px;
+  border-radius: 1.5px;
+}
+
+.photoarea .photo {
+  position: relative;
+  transition: box-shadow 0.4s linear;
+  box-shadow: 2px -4px 500px 12px #caa95716;
+}
+
+.photoarea .photo:hover {
+  box-shadow: 2px -4px 500px 12px #caa95742;
+}
+
+.photoarea .photo:hover .appointment-event,
+.photoarea .photo:hover .appointment-event a {
+  opacity: 1;
+}
+
+.photo .appointment-event {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #00000059;
+  opacity: 0;
+  z-index: 998;
+  top: 0;
+}
+
+.photo .appointment-event .appointment a {
+  position: absolute;
+  top: 270px;
+  box-shadow: 1px 1px 50px 10px #000000ab;
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+.photo .appointment-event .appointment img {
+  margin: 0;
+}
+
+.appt-transition {
+  transition: 0.4s all linear;
+}
+
+.galery .instagram {
+  padding: 70px 0px 30px 0px;
+}
+
+.galery .instagram .appointment {
+  margin-top: 30px;
+}
+
+.galery .instagram .appointment a {
+  background: linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  background-size: 300% 300%;
+  color: #fff;
+  animation: colorChange 3s ease-in-out infinite;
+}
+
+@keyframes colorChange {
+  0% {
+    background-position: 0 50%;
+    box-shadow: 1px 1px 50px 10px #f0953343;
+  }
+  50% {
+    background-position: 100% 50%;
+    box-shadow: 1px 1px 50px 10px #bc18885d;
+  }
+  100% {
+    background-position: 0 50%;
+    box-shadow: 1px 1px 50px 10px #f0953343;
+  }
+}
